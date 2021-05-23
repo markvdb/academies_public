@@ -1,0 +1,67 @@
+digraph G {
+	label="Academie Ninove: bekabeling videostreaming";
+	#concentrate = true;
+	#compound = true;
+	node [shape = box];
+	subgraph cluster_mengtafel {
+		label = "uitvoer mengtafel geluid"
+		mix_panel_xlr_out_links [label = "audio links\nXLR mannelijk"];
+		mix_panel_xlr_out_rechts [label = "audio rechts\nXLR mannelijk"];
+	}
+
+	atem_laptop [label = "laptop 1\nbesturing ATEM-mixer\nsecretariaat met sticker 'Mark'\nwachtwoord: bel Mark"];
+	end_loop_laptop [label = "laptop 2\nopvolging op vimeo"];
+	subgraph cluster_camera {
+		label="camera\nCanon XF405"
+		URL="https://www.canon.nl/video-cameras/xf-405-and-xf-400/";
+		subgraph cluster_camera_sound {
+			camera_xlr_in_1 [label = "audio in CH1\nXLR vrouwelijk"];
+			camera_xlr_in_2 [label = "audio in CH2\nXLR vrouwelijk"];
+		}
+		camera_hdmi_out [label = "HDMI uit\nHDMI C (mini) vrouwelijk"];
+		camera_audio_monitor [label="audio uit\n3.5mm trs stereo vrouwelijk"];
+		camera_ac_in [label="stroomaanvoer"];
+		camera_sd_a [label="SD-kaartslot A"];
+		camera_sd_b [label="SD-kaartslot B"];
+	}
+
+	subgraph cluster_atem {
+		label = "ATEM Mini Pro video-mixer";
+		URL = "https://www.blackmagicdesign.com/products/atemmini/techspecs/W-APS-18";
+		atem_hdmi_in_1 [label="HDMI in 1\nHDMI vrouwelijk"];
+		atem_hdmi_in_2 [label="HDMI in 2\nHDMI vrouwelijk"];
+		atem_hdmi_in_3 [label="HDMI in 3\nHDMI vrouwelijk"];
+		atem_hdmi_in_4 [label="HDMI in 4\nHDMI vrouwelijk"];
+		atem_hdmi_out [label="HDMI uit\nHDMI vrouwelijk"];
+		atem_lan [label="netwerkaansluiting"];
+		atem_ac_in [label="stroomaanvoer"];
+	}
+	network_switch [label="8x Gbit netwerkswitch"];
+	uplink [label="internetverbinding\nleraarskamer 11b of danszaal 8a"];
+	hdmi_screen [label="beeldscherm\nHDMI vrouwelijk"];
+
+	streaming_power_strip [label="stekkerblok\n8 aansluitingen"];
+	
+	headphones [label="koptelefoon\n3.5mm trs stereo mannelijk", URL="https://en-us.sennheiser.com/over-ear-headphones-hd-201"];
+	headphones2 [label="koptelefoon\n3.5mm trs stereo mannelijk", URL="https://en-us.sennheiser.com/over-ear-headphones-hd-201"];
+
+	mix_panel_xlr_out_links -> camera_xlr_in_1 [label = "xlr-kabel\nvrouwelijk/mannelijk"];
+	mix_panel_xlr_out_rechts -> camera_xlr_in_2 [label = "xlr-kabel\nvrouwelijk/mannelijk"];
+	camera_hdmi_out -> atem_hdmi_in_1 [label = "HDMI-kabel\nHDMI C (mini) mannelijk - HDMI mannelijk"];
+	camera_audio_monitor -> headphones;
+	end_loop_laptop -> headphones2;
+	uplink -> network_switch [dir = "both", label="50m ethernetkabel op rol"];
+	network_switch -> atem_laptop [dir = "both", label="ethernetkabel"];
+	network_switch -> end_loop_laptop [dir = "both", label="ethernetkabel"];
+	network_switch -> atem_lan [dir = "both", label="ethernetkabel"];
+
+	# AC power
+	streaming_power_strip -> camera_ac_in;
+	streaming_power_strip -> atem_laptop;
+	streaming_power_strip -> end_loop_laptop;
+	streaming_power_strip -> network_switch;
+	streaming_power_strip -> atem_ac_in;
+	streaming_power_strip -> hdmi_screen;
+
+	atem_hdmi_out -> hdmi_screen [label = "HDMI-kabel"];
+}
