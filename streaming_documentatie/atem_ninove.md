@@ -35,11 +35,11 @@ Is alles fysiek goed verbonden? Heeft alles stroom? Nu gaan we de invoer van gel
 
 Als alles goed is zie je op het scherm van de videomixer al dat die wakker is, maar heb je nog geen beeld of geluid van de camera. Dat gaan we nu veranderen:
 - Op de videomixer linksonderaan op de grote knop "1" drukken. Deze licht op. Je krijgt op het mixerscherm rechtsboven het beeld van de camera te zien.
-- ![grote knop 1 uit](IMG_0038.JPG?raw=true "grote knop 1 uit")
-- ![grote knop 1 aan](IMG_0039.JPG?raw=true "grote knop 1 aan")
+- ![grote knop 1 uit](IMG_0038.JPEG?raw=true "grote knop 1 uit")
+- ![grote knop 1 aan](IMG_0039.JPEG?raw=true "grote knop 1 aan")
 - Nu boven de grote knop "1" linksonderaan op het kleine knopje "on" drukken. Dit licht op. Stuur je nu geluid naar de camera, dan zie je rechts onderaan het mixerscherm bij "CAM1" de geluidsvolumemeter bewegen.
-- ![geluid camera 1 uit](IMG_0040.JPG?raw=true "geluid camera 1 uit")
-- ![geluid camera 1 aan](IMG_0041.JPG?raw=true "geluid camera 1 aan")
+- ![geluid camera 1 uit](IMG_0040.JPEG?raw=true "geluid camera 1 uit")
+- ![geluid camera 1 aan](IMG_0041.JPEG?raw=true "geluid camera 1 aan")
 
 ### Verbinding met vimeo testen
 - De laptop met label NBAMWD05 (besturing van de ATEM-mixer) starten.
@@ -47,7 +47,7 @@ Als alles goed is zie je op het scherm van de videomixer al dat die wakker is, m
 - Het programma "ATEM Software Control" starten.
 
 Als het goed is ziet je scherm er dan ongeveer als volgt uit:
-![ATEM Software Control](IMG_0043.JPG?raw=true "ATEM Software Control")
+![ATEM Software Control](IMG_0043.JPEG?raw=true "ATEM Software Control")
 
 - In het midden onderaan voor "Switcher" kiezen, en dan rechtsboven voor "Output".
 - Bij "key" de streaming key invullen die je daarnet hebt aangemaakt. Goed opletten dat je deze _exact_ kopieert. Kijk goed of je geen spaties voor of achter de streaming key hebt staan. Dat merk je niet onmiddellijk, maar je stream zal niet werken!
