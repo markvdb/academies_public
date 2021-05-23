@@ -52,7 +52,9 @@ Als het goed is ziet je scherm er dan ongeveer als volgt uit:
 - In het midden onderaan voor "Switcher" kiezen, en dan rechtsboven voor "Output".
 - Bij "key" de streaming key invullen die je daarnet hebt aangemaakt. Goed opletten dat je deze _exact_ kopieert. Kijk goed of je geen spaties voor of achter de streaming key hebt staan. Dat merk je niet onmiddellijk, maar je stream zal niet werken!
 - Voor de rest alle instellingen laten zoals ze waren.
-- Rechtsboven op het fysieke bedieningspaneel van de videomixer op de knop "on air" drukken. Als het goed is knippert deze even kort rood en blijft hij daarna rood branden. Je bent nu live.
+- Rechtsboven op het fysieke bedieningspaneel van de videomixer op de knop "on air" drukken.
+- ![on air](IMG_0037.JPEG?raw=true "on air")
+- Als het goed is knippert deze even kort rood en blijft hij daarna rood branden. Je bent nu live.
 - Op de tweede laptop de link openen.
 
 ## Afbreken
